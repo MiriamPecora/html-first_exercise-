@@ -36,16 +36,50 @@
 
 // terzo esercizio:
 
-function somma() {
-  document.getElementById("valore").innerHTML;
-  document.getElementById("numberinput").value;
+let numberinput = 0;
+let risultato = 0;
 
-  console.log("SOMMA");
+function somma() {
+  numberinput = Number(document.getElementById("numberinput").value);
+  risultato = Number(document.getElementById("risultato").textContent);
+  console.log("risultatooooo", risultato);
+
+  risultato = risultato + numberinput;
+
+  if (risultato < 0) {
+    document.getElementById("risultato").className = "red";
+  } else {
+    document.getElementById("risultato").className = "";
+  }
+
+  aggiornaRisultato(risultato);
+  aggiornaInput();
+  console.log("somma", risultato);
 }
 function sottrai() {
-  console.log("SOTTRAI");
+  numberinput = Number(document.getElementById("numberinput").value);
+  risultato = Number(document.getElementById("risultato").textContent);
+
+  risultato = risultato - numberinput;
+
+  if (risultato < 0) {
+    document.getElementById("risultato").className = "red";
+  } else {
+    document.getElementById("risultato").className = "";
+  }
+
+  aggiornaRisultato(risultato);
+  aggiornaInput();
+
+  console.log("sottrai", risultato);
+}
+
+function aggiornaRisultato(risultatoAggiornato) {
+  document.getElementById("risultato").textContent = risultatoAggiornato;
+}
+function aggiornaInput() {
+  document.getElementById("numberinput").value = 0;
 }
 
 document.getElementById("somma").addEventListener("click", somma);
 document.getElementById("sottrai").addEventListener("click", sottrai);
-document.getElementById("numberinput").value;
