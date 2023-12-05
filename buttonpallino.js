@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   function handleClick() {
-    console.log("Hai cliccato il pulsante!");
+    console.log("Sono un pallino nero!");
   }
 
   var Pallino = document.getElementById("Pallino");
