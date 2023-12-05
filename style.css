@@ -13,9 +13,53 @@ body {
 header {
   display: flex;
   justify-content: center;
+  padding-top: 25px;
 }
 
-#contenitore_contatore {
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.calculator {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+#numberinput {
+  margin-top: 25px;
+  width: 170px;
+  height: 40px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 10px;
+  border: none;
+  background-color: pink;
+}
+
+.calculator button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: pink;
+  font-size: 25px;
+}
+
+#valore {
+  color: black;
+  font-size: 25px;
+}
+
+.red {
+  color: red;
+}
+
+/* #contenitore_contatore {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,12 +89,4 @@ header {
 
 #decrementa {
   width: 50px;
-}
-
-/* main {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 } */
